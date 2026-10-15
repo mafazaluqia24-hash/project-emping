@@ -1,0 +1,6 @@
+# Blokir akses langsung ke berkas internal
+RedirectMatch 403 ^/emping/(config|src|tests|docs|\.github)/
+<FilesMatch "\.(sql|md|sample\.php|gitignore)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
